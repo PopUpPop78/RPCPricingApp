@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-6">
+    <form class="prc-form" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <input autofocus class="form-control" name="Username" #Username="ngModel" [(ngModel)]="loginService.loginData.Username" placeholder="Username" required>
+          <div class="validation-error"  *ngIf="Username.invalid && Username.touched">This field is required</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+            <input class="form-control" name="Password" type="password" #Password="ngModel" [(ngModel)]="loginService.loginData.Password" placeholder="Password" required>
+            <div class="validation-error" *ngIf="Password.invalid && Password.touched">This field is required</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <button [disabled]="!loginForm.valid" type="submit" class="btn btn-block btn-info"><i class="fas fa-calculator"></i> Submit</button>
+          <div class="validation-error" *ngIf="loginFailedMessage != ''">{{loginFailedMessage}}</div>
+        </div>
+        <div class="form-group col-md-4">          
+          <button (click)="resetForm(loginForm)" type="button" class="btn btn-block"><i class="fas fa-skull"></i> Clear</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

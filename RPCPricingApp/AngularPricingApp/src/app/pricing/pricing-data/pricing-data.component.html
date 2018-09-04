@@ -1,0 +1,35 @@
+<form class="prc-form" #pricingForm="ngForm" (ngSubmit)="onSubmit(pricingForm)">
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input autofocus currencyMask class="form-control" name="MainLimit" id="mainlimit" #MainLimit="ngModel" [(ngModel)]="pricingService.selectedPricingDocument.Request.MainLimit" placeholder="Main Limit" required>
+      <div class="validation-error"  *ngIf="MainLimit.invalid && MainLimit.touched">This field is required and must be positive</div>
+    </div>
+    <div class="form-group col-md-6">
+        <input class="form-control" currencyMask name="MainRetention" #MainRetention="ngModel" [(ngModel)]="pricingService.selectedPricingDocument.Request.MainRetention" placeholder="Main Retention" required>
+        <div class="validation-error" *ngIf="MainRetention.invalid && MainRetention.touched">This field is required and must be positive</div>
+    </div>
+  </div>
+
+  <div class="form-row">   
+    <div class="dropdown form-group col-md-6">
+      <button class="btn btn-block btn-secondary dropdown-toggle" type="button" name="btnExecutionType" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Execution Type</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a *ngFor="let t of pricingService.executionTypes" class="dropdown-item form-group col-md-6" (click)="updateExecutionType(t)" href="#">{{t}}</a>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+        <input class="form-control" name="ExecutionType" #ExecutionType="ngModel" [(ngModel)]="pricingService.selectedPricingDocument.Request.ExecutionType" placeholder="Execution Type" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!pricingForm.valid" type="submit" class="btn btn-block btn-info"><i class="fas fa-calculator"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">          
+      <button (click)="resetForm(pricingForm)" type="button" class="btn btn-block"><i class="fas fa-skull"></i> Clear</button>
+    </div>
+  </div>
+
+</form>

@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div style="text-align: center">
+    <h3 class="jumbotron bg-secondary text-white">RPC Pricing App</h3>
+  </div>
+
+  <!------------------------------------------------------------->
+  <!-- Need to add animation for logged in to pricing selector -->
+  <!------------------------------------------------------------->
+
+  <app-login *ngIf="!loginService.loggedIn">
+
+  </app-login>
+
+  <app-pricing *ngIf="loginService.loggedIn">
+
+  
+  </app-pricing>
+
+</div>
