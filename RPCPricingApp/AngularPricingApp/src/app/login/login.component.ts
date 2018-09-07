@@ -18,9 +18,9 @@ export class LoginComponent implements OnInit {
     this.resetForm();
   }
 
-  onSubmit(form:NgForm){
+  onSubmit(form: NgForm){
     this.loginFailedMessage = '';
-    this.loginService.login().subscribe(data=>{
+    this.loginService.login(this.loginService.loginData).subscribe(data=>{
       this.loginService.loggedIn = data;
       if(!data)
         this.loginFailedMessage = 'Login failed for ' + this.loginService.loginData.Username;

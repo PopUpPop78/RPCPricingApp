@@ -6,15 +6,15 @@
                                                             primaryColour:'#D3D3D3', 
                                                             secondaryColour:'#C0C0C0', 
                                                             tertiaryColour:'#A9A9A9'}"></ngx-loading>
-
-    <tr style="text-align: center;font-weight: bold" *ngIf="pricingService.selectedPricingDocument.Response?.length > 0">
+<!---->
+    <tr style="text-align: center;font-weight: bold" *ngIf="pricingService.selectedPricingDocument.response?.length > 0">
         <td>Reference Date</td>
         <td>Benchmark 1</td>
         <td>Benchmark 2</td>
     </tr>
-    <tr *ngFor="let res of pricingService.selectedPricingDocument.Response">
-        <td style="text-align: center">{{res.ReferenceDate | date:'dd MMM yyyy'}}</td>
-        <td style="text-align: center">{{res.BenchmarkOne | percent:'1.0-0'}}</td>
-        <td style="text-align: center">{{res.BenchmarkTwo | percent:'1.0-0'}}</td>
+    <tr *ngFor="let res of pricingService.selectedPricingDocument.response">
+        <td style="text-align: center">{{res.referenceDate | date:'dd MMM yyyy'}}</td>
+        <td style="text-align: center">{{res.benchmarkOne | percent:'1.0-0'}}</td>
+        <td style="text-align: center">{{res.benchmarkTwo | percent:'1.0-0'}}</td>
     </tr>
 </table>

@@ -4,8 +4,9 @@ import { PricingResponse } from "./pricing-response.model";
 
 export class PricingDocument {
 
-    PricingId: string
-    Request: PricingRequest
-    Response: PricingResponse[]
+    pricingId: string;
+    request: PricingRequest;
+    response: PricingResponse[];
+    error:string;
 
 }

@@ -12,12 +12,12 @@ export class LoginService {
 
   loggedIn:boolean = false;
   loginData:LoginData;
-  private apiUrl:string = 'http://localhost:51063/api/Login/';
+  private apiUrl:string = 'https://localhost:44364/api/Login/';
 
   constructor(private http:Http) { }
 
-  login(){
-    var body = JSON.stringify(this.loginData);
+  login(doc: LoginData){
+    var body = JSON.stringify(doc);
     var headerOptions = new Headers({'Content-Type':'application/json'});
     var requestOptions = new RequestOptions({method : RequestMethod.Post, headers : headerOptions});
     return this.http.post(this.apiUrl, body, requestOptions).map(x=> x.json());

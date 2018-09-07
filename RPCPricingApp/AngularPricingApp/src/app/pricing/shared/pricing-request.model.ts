@@ -1,5 +1,5 @@
 export class PricingRequest {
-    ExecutionType: string;
-    MainLimit: number;
-    MainRetention: number;
+    executionType: string;
+    mainLimit: number;
+    mainRetention: number;
 }

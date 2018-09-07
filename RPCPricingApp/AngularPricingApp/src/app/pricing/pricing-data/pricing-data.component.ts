@@ -25,28 +25,31 @@ export class PricingDataComponent implements OnInit {
     if(form != null)
       form.reset();
     this.pricingService.selectedPricingDocument = new PricingDocument();
-    this.pricingService.selectedPricingDocument.Request = new PricingRequest();
+    this.pricingService.selectedPricingDocument.request = new PricingRequest();
   }
 
 
   updateExecutionType(executionType:string){
-    this.pricingService.selectedPricingDocument.Request.ExecutionType = executionType;
+    this.pricingService.selectedPricingDocument.request.executionType = executionType;
   }
 
   loadExecutionTypes(){    
     this.pricingService.getExecutionTypes().subscribe(data=>{
       this.pricingService.executionTypes = data;
-    });
+    }, err=>{
+      alert(err);
+    });;
   }
 
   onSubmit(form: NgForm){
-    this.pricingService.selectedPricingDocument.Response = [];
+    this.pricingService.selectedPricingDocument.response = [];
     this.pricingService.loading = true;
-    this.pricingService.postPricingDocument(form.value).subscribe(data=>{
+    this.pricingService.postPricingDocument(this.pricingService.selectedPricingDocument).subscribe(data=>{
       this.pricingService.selectedPricingDocument = data;
       this.pricingService.loading = false;
     }, err=>{
-      this.pricingService.loading = false;
+      this.pricingService.loading = false;     
+      alert(err); 
     });
     ;
 
