@@ -1,8 +1,8 @@
 ﻿using System;
 
-using RPCPricingApp.Models;
-using RPCPricingApp.Data;
-using RPCPricingApp.Pricing;
+using RPCPricingAppCore.Models;
+using RPCPricingAppCore.Data;
+using RPCPricingAppCore.Pricing;
 
 namespace PricingDatastoreTestHarness
 {

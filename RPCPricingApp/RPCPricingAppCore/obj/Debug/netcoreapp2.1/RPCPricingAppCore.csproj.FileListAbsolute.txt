@@ -19,7 +19,6 @@ C:\Users\Jason\Desktop\Me\Development\RPC\RPCPricingApp\RPCPricingAppCore\bin\De
 C:\Users\Jason\Desktop\Me\Development\RPC\RPCPricingApp\RPCPricingAppCore\bin\Debug\netcoreapp2.1\RPCPricingAppCore.runtimeconfig.dev.json
 C:\Users\Jason\Desktop\Me\Development\RPC\RPCPricingApp\RPCPricingAppCore\bin\Debug\netcoreapp2.1\RPCPricingAppCore.dll
 C:\Users\Jason\Desktop\Me\Development\RPC\RPCPricingApp\RPCPricingAppCore\bin\Debug\netcoreapp2.1\RPCPricingAppCore.pdb
-C:\Users\Jason\Desktop\Me\Development\RPC\RPCPricingApp\RPCPricingAppCore\obj\Debug\netcoreapp2.1\RPCPricingAppCore.csprojAssemblyReference.cache
 C:\Users\Jason\Desktop\Me\Development\RPC\RPCPricingApp\RPCPricingAppCore\obj\Debug\netcoreapp2.1\RPCPricingAppCore.csproj.CoreCompileInputs.cache
 C:\Users\Jason\Desktop\Me\Development\RPC\RPCPricingApp\RPCPricingAppCore\obj\Debug\netcoreapp2.1\RPCPricingAppCore.RazorAssemblyInfo.cache
 C:\Users\Jason\Desktop\Me\Development\RPC\RPCPricingApp\RPCPricingAppCore\obj\Debug\netcoreapp2.1\RPCPricingAppCore.RazorAssemblyInfo.cs

@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RPCPricingApp\RPCPricingApp.csproj" />
+    <ProjectReference Include="..\RPCPricingAppCore\RPCPricingAppCore.csproj" />
   </ItemGroup>
 
 </Project>
